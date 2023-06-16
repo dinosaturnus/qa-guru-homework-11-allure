@@ -20,6 +20,7 @@ public class WebStepsTest extends TestBase {
         steps.clickOnRepositoryLink(REPOSITORY);
         steps.openIssuesTab();
         steps.shouldSeeIssueWithName(ISSUE);
+        steps.takeScreenshot();
 
     }
 }
