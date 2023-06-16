@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 import static org.openqa.selenium.By.linkText;
 
-public class LambdaStepsTest {
+public class LambdaStepsTest extends TestBase {
 
     private static final String REPOSITORY = "eroshenkoam/allure-example";
     private static final String ISSUE = "issue_to_test_allure_report";
@@ -43,16 +43,4 @@ public class LambdaStepsTest {
 
     }
 
-    @Test
-    public void testAnnotatedStep() {
-
-        SelenideLogger.addListener("allure", new AllureSelenide());
-        WebStepsTest steps = new WebStepsTest();
-
-        steps.openMainPage();
-        steps.searchForRepository(REPOSITORY);
-        steps.clickOnRepositoryLink(REPOSITORY);
-        steps.openIssuesTab();
-        steps.shouldSeeIssueWithName(ISSUE);
-    }
 }

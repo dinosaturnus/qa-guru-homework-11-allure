@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 
-public class SelenideListenerTest {
+public class SelenideListenerTest extends TestBase {
 
     @Test
     public void testSelenideListener() {
